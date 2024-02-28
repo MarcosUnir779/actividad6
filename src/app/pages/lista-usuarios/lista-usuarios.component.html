@@ -1,1 +1,7 @@
-<p>lista-usuarios works!</p>
+<section class="mt-4 row">
+    @for(usuario of arrUsuarios; track usuario.id){
+        <article class="col-12 col-md-6 col-lg-4">
+            <app-usuario-card [miUsuario]="usuario"></app-usuario-card>
+        </article>
+    }
+</section>

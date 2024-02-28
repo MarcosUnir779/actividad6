@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { IUsuario } from '../../interfaces/usuario.interfaces';
+import { UsuariosService } from '../../services/usuarios.service';
 
 @Component({
   selector: 'app-usuario-view',
@@ -9,4 +12,17 @@ import { Component } from '@angular/core';
 })
 export class UsuarioViewComponent {
 
+  activedRoute = inject(ActivatedRoute)
+  usuariosService = inject(UsuariosService)
+  usuario!: IUsuario
+
+  ngOnInit(){
+    this.activedRoute.params.subscribe((u:any) => {
+      let id = Number(u.id)
+      let response = this.usuariosService.getById(id)
+      if(response !== undefined){
+        this.usuario = response
+      }
+    })
+  }
 }

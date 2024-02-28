@@ -1,1 +1,18 @@
-<p>usuario-card works!</p>
+<div class="card p-3">
+    <h3 class="card-title">{{miUsuario.first_name}}</h3>
+    <figure>
+        <img class="img-fluid" [src]="'./assets/' + miUsuario.image" alt="">
+    </figure>
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <a [routerLink]="['/usuario', miUsuario.id]" class="btn btn-primary">Ver detalle</a>
+        </div>
+        <div class="col-md-4 text-center">
+            <a href="" class="btn btn-primary">Borrar</a>
+        </div>
+        <div class="col-md-4 text-center">
+            <a href="" class="btn btn-primary">Actualizar</a>
+        </div> 
+    </div>
+    
+</div>
