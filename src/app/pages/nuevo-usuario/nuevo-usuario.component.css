@@ -1,0 +1,7 @@
+.error {
+    color: tomato;
+}
+
+input.ng-valid.ng-touched{
+    border-bottom: 2px solid rgb(5, 208, 5);
+}

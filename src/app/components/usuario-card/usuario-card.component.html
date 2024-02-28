@@ -1,18 +1,19 @@
-<div class="card p-3">
-    <h3 class="card-title">{{miUsuario.first_name}}</h3>
-    <figure>
-        <img class="img-fluid" [src]="'./assets/' + miUsuario.image" alt="">
-    </figure>
-    <div class="row">
-        <div class="col-md-4 text-center">
-            <a [routerLink]="['/usuario', miUsuario.id]" class="btn btn-primary">Ver detalle</a>
-        </div>
-        <div class="col-md-4 text-center">
-            <a href="" class="btn btn-primary">Borrar</a>
-        </div>
-        <div class="col-md-4 text-center">
-            <a href="" class="btn btn-primary">Actualizar</a>
-        </div> 
-    </div>
-    
+<figure class="text-center">
+    <img class="img-fluid rounded-circle img-user" [src]="miUsuario.image" alt="">
+</figure>
+<div class="text-center mb-3"> 
+    <h4 class="card-title user-title">{{miUsuario.first_name}} {{miUsuario.last_name}}</h4>
 </div>
+<div class="text-center mb-5"> 
+    <a [routerLink]="['/usuario', miUsuario.id]" class="btn btn-primary me-2 mb-2 btn-user">Detalle</a> 
+    <a href="" class="btn btn-primary me-2 mb-2 btn-user">Actualizar</a> 
+    <a href="" class="btn btn-primary mb-2 btn-user">Borrar</a> 
+</div>
+
+
+
+
+
+
+
+

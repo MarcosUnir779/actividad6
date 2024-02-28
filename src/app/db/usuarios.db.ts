@@ -7,7 +7,7 @@ export const USUARIOS: IUsuario[] = [
         "last_name": "García Pérez",
         "username": "luis.garcia",
         "email": "luis.garciaperez@peticiones.online",
-        "image": "https://i.pravatar.cc/500?u=luis.garciaperez@peticiones.online"
+        "image": "https://i.pravatar.cc/500?u=elena.jimenezlopez@peticiones.online"
     },
     {
         "id": 72,
@@ -15,7 +15,7 @@ export const USUARIOS: IUsuario[] = [
         "last_name": "Martínez Sánchez",
         "username": "ana.martinez",
         "email": "ana.martinezsanchez@peticiones.online",
-        "image": "https://i.pravatar.cc/500?u=ana.martinezsanchez@peticiones.online"
+        "image": "https://i.pravatar.cc/500?u=elena.jimenezlopez@peticiones.online"
     },
     {
         "id": 89,
@@ -23,7 +23,7 @@ export const USUARIOS: IUsuario[] = [
         "last_name": "González Rodríguez",
         "username": "javier.gonzalez",
         "email": "javier.gonzalezrodriguez@peticiones.online",
-        "image": "https://i.pravatar.cc/500?u=javier.gonzalezrodriguez@peticiones.online"
+        "image": "https://i.pravatar.cc/500?u=sofia.martinperez@peticiones.online"
     },
     {
         "id": 103,
