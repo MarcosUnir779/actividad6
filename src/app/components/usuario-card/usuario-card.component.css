@@ -1,7 +1,7 @@
 
 .img-user {
-    width: 240px;
-    height: 240px; 
+    width: 200px;
+    height: 200px; 
 }
 
 .user-title {
@@ -11,4 +11,14 @@
 .btn-user {
     margin-right: 10px; 
     margin-bottom: 10px; 
+}
+
+.button-container .btn-user {
+    width: calc(100% / 3 - 10px); /* Dividir el ancho en 3 partes y restar 10px para el margen */
+    margin-right: 5px; /* Añadir un pequeño margen entre los botones */
+    margin-bottom: 5px; /* Añadir un pequeño margen inferior entre los botones */
+}
+
+.button-container .btn-user:last-child {
+    margin-right: 0; /* Eliminar el margen derecho del último botón */
 }

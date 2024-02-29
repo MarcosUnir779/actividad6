@@ -1,39 +1,41 @@
 
-<form [formGroup]="modelForm" class="card p-3 shadow" (ngSubmit)="guardarUsuario()">
-    <h3>NUEVO USUARIO</h3>
-    <div class="my-2">
-        <label for="nombre">Nombre Usuario</label>
-        <input type="text" class="form-control" id="nombre" placeholder="introduzca nombre de usuario" formControlName="nombre">
-        @if(checkControl('nombre', 'required')){
-            <p class="error">Campo requerido</p>
-        }
-    </div>
-    <div class="my-2">
-        <label for="apellido">Apellido Usuario</label>
-        <input type="text" class="form-control" id="apellido" placeholder="introduzca apellido de usuario" formControlName="apellido">
-        @if(checkControl('apellido', 'required')){
-            <p class="error">Campo requerido</p>
-        }
-    </div>
-    <div class="my-2">
-        <label for="email">Email Usuario</label>
-        <input type="text" class="form-control" id="email" placeholder="introduzca email de usuario" formControlName="email">
-        @if(checkControl('email', 'required')){
-            <p class="error">Campo requerido</p>
-        }@else if(checkControl('email', 'pattern')){
-            <p class="error">El email introducido no es correcto</p>
-        }
-    </div>
-    <div class="my-2">
-        <label for="image">Imagen Usuario</label>
-        <input type="text" class="form-control" id="image" placeholder="introduzca imagen de usuario" formControlName="image">
-        @if(checkControl('image', 'required')){
-            <p class="error">Campo requerido</p>
-        }
-    </div>
-    <div class="col-3">
-        <input type="submit" value="Guardar" class="btn btn-primary" [disabled]="!modelForm.valid">
-    </div>
+<article class="article-container mx-auto px-4 mx-5 my-3">
+    <form [formGroup]="modelForm" class=" p-3" (ngSubmit)="guardarUsuario()">
+        <h3>NUEVO USUARIO</h3>
+        <div class="my-2">
+            <label for="nombre">Nombre Usuario</label>
+            <input type="text" class="form-control" id="nombre" placeholder="introduzca nombre de usuario" formControlName="nombre">
+            @if(checkControl('nombre', 'required')){
+                <p class="error">Campo requerido</p>
+            }
+        </div>
+        <div class="my-2">
+            <label for="apellido">Apellido Usuario</label>
+            <input type="text" class="form-control" id="apellido" placeholder="introduzca apellido de usuario" formControlName="apellido">
+            @if(checkControl('apellido', 'required')){
+                <p class="error">Campo requerido</p>
+            }
+        </div>
+        <div class="my-2">
+            <label for="email">Email Usuario</label>
+            <input type="text" class="form-control" id="email" placeholder="introduzca email de usuario" formControlName="email">
+            @if(checkControl('email', 'required')){
+                <p class="error">Campo requerido</p>
+            }@else if(checkControl('email', 'pattern')){
+                <p class="error">El email introducido no es correcto</p>
+            }
+        </div>
+        <div class="my-2">
+            <label for="image">Imagen Usuario</label>
+            <input type="text" class="form-control" id="image" placeholder="introduzca imagen de usuario" formControlName="image">
+            @if(checkControl('image', 'required')){
+                <p class="error">Campo requerido</p>
+            }
+        </div>
+        <div class="col-3">
+            <input type="submit" value="Guardar" class="btn btn-primary" [disabled]="!modelForm.valid">
+        </div>
     </form>
+</article>
 
 
