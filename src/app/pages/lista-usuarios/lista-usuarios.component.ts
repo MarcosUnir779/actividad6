@@ -15,8 +15,15 @@ export class ListaUsuariosComponent {
   arrUsuarios: IUsuario [] = []
   usuarioService = inject(UsuariosService)
 
-  ngOnInit(){
-    this.arrUsuarios = this.usuarioService.getAll()
+  async ngOnInit(){
+    console.log("ee")
+    try {
+      this.arrUsuarios = await this.usuarioService.getAll();
+      console.log(this.arrUsuarios)
+    } catch (error) {
+      console.log(error)
+    }
+    console.log(this.arrUsuarios)
   }
 
 }

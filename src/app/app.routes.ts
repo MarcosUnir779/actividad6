@@ -12,5 +12,6 @@ export const routes: Routes = [
     },
     {path: "usuario/:id", component: UsuarioViewComponent},
     {path: "newuser", component: NuevoUsuarioComponent},
+    {path: "updateuser/:id", component: NuevoUsuarioComponent},
     {path: '**', redirectTo: "home"} //Mirar si es necesario error 404
 ];

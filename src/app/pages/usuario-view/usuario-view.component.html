@@ -12,11 +12,7 @@
                 <p><strong>Nombre Usuario:</strong> {{usuario.username}}</p>
                 <p><strong>Email:</strong> {{usuario.email}}</p>
                 <div class="text-center">
-                    <div class="btn-group d-flex align-items-stretch">
-                        <a href="#" class="btn btn-primary equal-width btn-with-border text-center d-flex align-items-center justify-content-center">Eliminar</a>
-                        <a href="#" class="btn btn-primary equal-width btn-with-border text-center d-flex align-items-center justify-content-center">Actualizar</a>
-                        <a [routerLink]="['/home']" class="btn btn-primary equal-width btn-with-border text-center d-flex align-items-center justify-content-center">Volver a listado</a>
-                    </div>
+                    <app-botonera [idUser]="usuario._id"></app-botonera>
                 </div>
             </div>
         </div>
