@@ -10,8 +10,8 @@ export const routes: Routes = [
         {path: "", component: ListaUsuariosComponent},
         ]
     },
-    {path: "usuario/:id", component: UsuarioViewComponent},
+    {path: "user/:id", component: UsuarioViewComponent},
     {path: "newuser", component: NuevoUsuarioComponent},
     {path: "updateuser/:id", component: NuevoUsuarioComponent},
-    {path: '**', redirectTo: "home"} //Mirar si es necesario error 404
+    {path: '**', redirectTo: "home"} 
 ];

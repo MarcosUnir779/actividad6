@@ -5,15 +5,15 @@
     <h4 class="card-title user-title">{{miUsuario.first_name}} {{miUsuario.last_name}}</h4>
 </div>
 <div class="button-container text-center mb-5"> 
-    <a [routerLink]="['/usuario', miUsuario._id]" class="btn btn-primary mb-2 btn-user">
+    <a [routerLink]="['/user', miUsuario._id]" class="btn btn-primary mb-2 btn-user">
         <i class="fa-solid fa-magnifying-glass"></i>
         <div>Detalle</div>
     </a> 
-    <a href="" class="btn btn-primary mb-2 btn-user">
+    <a [routerLink]="['/updateuser', miUsuario._id]"  class="btn btn-primary mb-2 btn-user">
         <i class="fa-solid fa-rotate"></i>
         <div>Actualizar</div>
     </a> 
-    <a href="" class="btn btn-primary mb-2 btn-user">
+    <a class="btn btn-primary mb-2 btn-user" (click)="borrarUser()">
         <i class="fa-solid fa-trash-can"></i>
         <div>Borrar</div>
     </a> 

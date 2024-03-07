@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { IUsuario } from '../../interfaces/usuario.interfaces';
 import { RouterLink } from '@angular/router';
+import { UsuariosService } from '../../services/usuarios.service';
 
 @Component({
   selector: 'app-usuario-card',
@@ -12,4 +13,16 @@ import { RouterLink } from '@angular/router';
 export class UsuarioCardComponent {
 
   @Input() miUsuario!: IUsuario;
+
+  usuarioService = inject(UsuariosService)
+
+  async borrarUser() {
+    let response = confirm('Seguro que quiere borrar el usuario con id: ' + this.miUsuario._id);
+     if(response){
+      let res = await this.usuarioService.delete(this.miUsuario._id);
+      if(res){
+        alert('Se ha borrado correctamente')
+      }
+    }
+  }
 }

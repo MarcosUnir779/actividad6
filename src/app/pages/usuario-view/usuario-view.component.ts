@@ -15,15 +15,13 @@ export class UsuarioViewComponent {
 
   activedRoute = inject(ActivatedRoute)
   usuariosService = inject(UsuariosService)
-  usuario!: IUsuario
+  usuario!: IUsuario ;
 
    ngOnInit(){
     this.activedRoute.params.subscribe(async(u:any) => {
       let id = u.id
-      console.log(id)
       try {
         this.usuario = await this.usuariosService.getById(id)
-        console.log(this.usuario)
       } catch (error) {
         console.log(error)
       }

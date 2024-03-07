@@ -16,14 +16,11 @@ export class ListaUsuariosComponent {
   usuarioService = inject(UsuariosService)
 
   async ngOnInit(){
-    console.log("ee")
     try {
       this.arrUsuarios = await this.usuarioService.getAll();
-      console.log(this.arrUsuarios)
     } catch (error) {
       console.log(error)
     }
-    console.log(this.arrUsuarios)
   }
 
 }

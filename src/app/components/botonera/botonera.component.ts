@@ -1,5 +1,5 @@
 import { Component, Input, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { UsuariosService } from '../../services/usuarios.service';
 
 @Component({
@@ -13,12 +13,12 @@ export class BotoneraComponent {
 
   @Input() idUser: string = "";
   usuarioService = inject(UsuariosService)
-
+  router = inject(Router)
   async borrarUser() {
-    console.log(this.idUser)
     let response = confirm('Seguro que quiere borrar el usuario con id: ' + this.idUser);
      if(response){
       let res = await this.usuarioService.delete(this.idUser);
+      this.router.navigate(['/users'])
       if(res){
         alert('Se ha borrado correctamente')
       }

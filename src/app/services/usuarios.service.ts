@@ -24,12 +24,19 @@ export class UsuariosService {
   // }
   
   getById(id:string): Promise<IUsuario>{
-    console.log(`${this.baseUrl}/$${id}`)
     return lastValueFrom(this.httpClient.get<IUsuario>(`${this.baseUrl}/${id}`))
   }
 
   delete(id:string): Promise<IUsuario>{
     return lastValueFrom(this.httpClient.delete<IUsuario>(`${this.baseUrl}/${id}`))
+  }
+
+  insert(formulario :IUsuario): Promise<IUsuario>{
+    return lastValueFrom(this.httpClient.post<IUsuario>(this.baseUrl, formulario));
+  }
+
+  update(formulario :IUsuario): Promise<IUsuario>{
+    return lastValueFrom(this.httpClient.put<IUsuario>(`${this.baseUrl}/${formulario._id}`, formulario));
   }
   
 }
