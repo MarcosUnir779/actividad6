@@ -30,6 +30,8 @@
             <input type="text" class="form-control" id="image" placeholder="introduzca imagen de usuario" formControlName="image">
             @if(checkControl('image', 'required')){
                 <p class="error">Campo requerido</p>
+            }@else if(checkControl('image', 'pattern')){
+                <p class="error">La url introducida no es correcta</p>
             }
         </div>
         @if(checkActualizar()){
@@ -41,7 +43,6 @@
                 <input type="submit" value="Guardar" class="btn btn-primary" [disabled]="!modelForm.valid">
             </div>
         }
-        
     </form>
 </article>
 
