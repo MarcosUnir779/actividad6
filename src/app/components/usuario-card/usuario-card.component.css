@@ -1,7 +1,7 @@
 
 .img-user {
-    width: 200px;
-    height: 200px; 
+    width: 150px;
+    height: 150px; 
 }
 
 .user-title {
@@ -14,11 +14,20 @@
 }
 
 .button-container .btn-user {
-    width: calc(100% / 3 - 10px); /* Dividir el ancho en 3 partes y restar 10px para el margen */
-    margin-right: 5px; /* Añadir un pequeño margen entre los botones */
-    margin-bottom: 5px; /* Añadir un pequeño margen inferior entre los botones */
+    width: calc(100% / 3 - 10px); 
+    margin-right: 5px; 
+    margin-bottom: 5px; 
 }
 
 .button-container .btn-user:last-child {
-    margin-right: 0; /* Eliminar el margen derecho del último botón */
+    margin-right: 0;
+}
+
+.btn-user {
+    font-size: 12px; 
+    padding: 5px 10px; 
+}
+
+.btn-user .fa-solid {
+    font-size: 14px;
 }

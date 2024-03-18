@@ -18,11 +18,7 @@ export class UsuariosService {
         map(response => response.results)
       ));
   }
-  
-  // getAll(): Promise<IUsuario[]>{
-  //   return lastValueFrom(this.httpClient.get<IUsuario[]>(this.baseUrl))
-  // }
-  
+
   getById(id:string): Promise<IUsuario>{
     return lastValueFrom(this.httpClient.get<IUsuario>(`${this.baseUrl}/${id}`))
   }
